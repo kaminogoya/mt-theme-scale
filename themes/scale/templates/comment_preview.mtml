@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<$mt:Include module="<__trans phrase="HTML Head">"$>
+        <title><__trans phrase="Previewing your Comment"> - <$mt:BlogName encode_html="1"$></title>
+        <script type="text/javascript">
+        /* <![CDATA[ */
+            var user = <$mt:UserSessionState$>;
+            var is_preview = true;
+        /* ]]> */
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="global">
+<$mt:Include module="<__trans phrase="Navigation">"$>
+            </nav>
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+        </header>
+
+        <div class="content">
+
+            <section>
+                <header>
+                    <h1 class="title page"><__trans phrase="Previewing your Comment"></h1>
+                </header>
+
+                <article id="comment-<$mt:CommentID$>" class="feedback comment<mt:IfCommentParent> comment-reply</mt:IfCommentParent><mt:IfCommenterIsEntryAuthor> entry-author-comment</mt:IfCommenterIsEntryAuthor>">
+                    <header>
+                        <h2><mt:IfCommentParent><__trans phrase="[_1] replied to <a href="[_2]">comment from [_3]</a>" params="<$mt:CommentAuthorLink$>%%<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>%%<mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent>"><mt:Else><$mt:CommentAuthorLink$></mt:IfCommentParent></h2>
+                    </header>
+
+<$mt:CommentBody$>
+
+                    <footer>
+                        <dl>
+                            <dt><__trans phrase="Date"></dt>
+                            <dd><a href="<$mt:CommentLink$>"><abbr class="published" title="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></abbr></a></dd>
+                        </dl>
+                    </footer>
+                </article>
+
+                <mt:Include module="<__trans phrase="Comment Form">">
+
+        </div>
+
+        <footer>
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+<mt:If tag="BlogCommentCount">
+    <mt:Comments lastn="10" sort_order="descend">
+        <mt:CommentsHeader>
+<div class="widget-recent-comments widget section">
+    <h2><__trans phrase="Recent Comments"></h2>
+    <ul>
+        </mt:CommentsHeader>
+        <li><__trans phrase="[_1] on <a href="[_2]" title="full comment on: [_3]">[_3]</a>" params="<$mt:CommentAuthor$>%%<$mt:CommentLink$>%%<mt:CommentEntry><$mt:EntryTitle$></mt:CommentEntry>"></li>
+        <mt:CommentsFooter>
+    </ul>
+</div>
+        </mt:CommentsFooter>
+    </mt:Comments>
+</mt:If>

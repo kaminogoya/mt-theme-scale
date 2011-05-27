@@ -1,0 +1,25 @@
+# Scale Theme for Movable Type 5
+
+## Author
+
+Taichi Kaminogoya
+
+## License
+
+This library is free software released under the GPL.
+
+## Installation
+
+1. Unpack the mt-theme-scale archive.
+2. Copy the contents of mt-theme-scale/themes/scale into /path/to/mt/themes
+3. Sign in to your Movable Type and apply the Scale theme.
+
+## Styles
+
+1. Tone Black (Default)
+
+## Changes
+
+### 0.1 (May 27, 2011)
+
+* Initial release

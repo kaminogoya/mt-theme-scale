@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<$mt:Include module="<__trans phrase="HTML Head">"$>
+        <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<$mt:Link template="index_rsd"$>" />
+        <title><$mt:BlogName encode_html="1"$></title>
+    </head>
+    <body class="main-index">
+        <header>
+            <nav class="global">
+<$mt:Include module="<__trans phrase="Navigation">"$>
+            </nav>
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+        </header>
+
+        <div class="content">
+
+            <div class="main-content">
+<mt:Entries>
+    <$mt:Include module="<__trans phrase="Entry Summary">"$>
+</mt:Entries>
+            </div>
+
+            <div class="related-content">
+<$mt:WidgetSet name="<__trans phrase="Related Contents (Index)">"$>
+            </div>
+
+        </div>
+
+        <footer>
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+        </footer>
+    </body>
+</html>

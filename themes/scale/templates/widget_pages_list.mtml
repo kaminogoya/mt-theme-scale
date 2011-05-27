@@ -1,0 +1,24 @@
+<mt:IfArchiveTypeEnabled archive_type="Page">
+<div class="widget-pages widget section">
+    <h2><__trans phrase="Pages"></h2>
+    <ul>
+    <mt:Pages no_folder="1" sort_by="title" sort_order="ascend">
+        <li class="page page-<$mt:PageID$>"><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+    </mt:Pages>
+    <mt:TopLevelFolders>
+        <li class="folder folder-<$mt:FolderID$>"><$mt:FolderLabel$>
+        <mt:Pages sort_by="title" sort_order="ascend">
+            <mt:PagesHeader>
+            <ul>
+            </mt:PagesHeader>
+                <li class="page page-<$mt:PageID$>"><a href="<$mt:PagePermalink$>"><$mt:PageTitle$></a></li>
+            <mt:PagesFooter>
+            </ul>
+            </mt:PagesFooter>
+        </mt:Pages>
+        </li>
+        <$mt:SubFolderRecurse$>
+    </mt:TopLevelFolders>
+    </ul>
+</div>
+</mt:IfArchiveTypeEnabled>

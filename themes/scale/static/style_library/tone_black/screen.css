@@ -1,0 +1,204 @@
+/*
+
+name: Tone Black
+designer: Taichi Kaminogoya
+designer_url: http://kaminogoya.typepad.com/
+
+*/
+
+body {
+    color: #2b2b2b;
+}
+
+a {
+    color: #274a78;
+}
+a:hover {
+    text-decoration: none;
+}
+.title a {
+    color: #000;
+    text-decoration: none;
+}
+.title a:hover {
+    text-decoration: underline;
+}
+nav a {
+    text-decoration: none;
+}
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* - Elements */
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    color: #000;
+}
+
+article {
+    border-bottom: 1px solid #dcdddd;
+}
+.entry article {
+    border: 0;
+}
+
+header time {
+    font-size: 90%;
+}
+
+pre {
+    background-color: #fbfbfb;
+}
+
+blockquote {
+    border: 1px solid #dcdddd;
+    background-color: #f3f3f3;
+    color: #7b7c7d;
+} 
+
+table { 
+    border: 1px solid #dcdddd;
+    border-width: 1px 0 0 1px;
+    background-color: #fff;
+}
+th, 
+td { 
+    border: solid #dcdddd;
+    border-width: 0 1px 1px 0;
+    word-wrap: break-word;
+}
+th { 
+    background-color: #f3f3f3;
+}
+
+body > header {
+    border-bottom: 0.62em solid #000;
+}
+
+body > footer {
+    border-top: 0.62em solid #000;
+}
+
+/* - Form */
+input[type=text], 
+input[type=password], 
+input.text,  
+textarea {
+    border: 1px solid #dcdddd;
+    border-top-color: #adadad;
+    border-left-color: #adadad;
+    background-color: #fbfbfb;
+}
+input[type=text]:focus, 
+input[type=password]:focus, 
+input.text:focus {
+    background-color: #fff;
+    outline: 0;
+}
+.text.disabled {
+    border-color: #dcdddd;
+    background-color: #f3f3f3;
+}
+
+button, 
+.button, 
+input[type=submit], 
+input[type=button], 
+.content-nav .nav-item { 
+    border: 1px solid #adadad;
+    background-color: #f3f3f3;
+    color: #000;
+}
+button:hover, 
+.button:hover, 
+input[type=submit]:hover, 
+input[type=button]:hover, 
+.content-nav .nav-item:hover { 
+    border-color: #7b7c7d;
+    background-color: #fafafa;
+    color: #2b2b2b;
+}
+button:active, 
+.button:active, 
+input[type=submit]:active, 
+input[type=button]:active, 
+.content-nav .nav-item:active { 
+    background-color: #dcdddd;
+}
+
+fieldset {
+    padding: 0 1.62em;
+    border: 1px solid #dcdddd;
+}
+legend {
+    padding: 0 0.62em;
+    color: #2b2b2b;
+}
+
+/* - Contents */
+/* -- Title */
+.title.blog {
+    margin: 0.62em 0 0;
+    font-size: 262%;
+}
+.title.archive {
+    margin: 0 0 0.62em;
+}
+.title.entry {
+    margin-top: 0;
+}
+
+/* - Widget */
+.widget h2 {
+    border-bottom: 1px solid #dcdddd;
+    font-size: 100%;
+}
+
+/* - Feedbacks */
+.message {
+    background-color: #f3f3f3;
+}
+#comments, 
+#trackbacks {
+    border-top: 0.62em solid #000;
+}
+.trackback {
+    padding: 0.62em 1.62em;
+    border: 1px solid #dcdddd;
+    background-color: #fafafa;
+}
+.feedback header {
+    margin-bottom: 0.62em;
+    padding: 0.62em;
+    background-color: #fafafa;
+}
+.feedback header h2 {
+    margin: 0;
+    font-size: 100%;
+    font-weight: normal;
+}
+.comment header {
+    border: 1px solid #dcdddd;
+}
+.trackback header {
+    border-bottom: 1px solid #dcdddd;
+}
+.feedback p {
+    margin-top: 0;
+}
+.feedback footer {
+    text-align: right;
+}
+
+/* - Navigation */
+.global .nav-list {
+    border-left: 1px solid #dcdddd;
+}
+.global .nav-item {
+    border-right: 1px solid #dcdddd;
+}

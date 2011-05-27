@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<mt:If name="comment_confirmation">
+    <$mt:Var name="page_title" value="<__trans phrase="Confirmation...">"$>
+    <$mt:Var name="message" value="<p class="message success"><__trans phrase="Your comment has been submitted!"></p>"$>
+<mt:Else name="comment_pending">
+    <$mt:Var name="page_title" value="<__trans phrase="Thank you for commenting.">"$>
+    <$mt:Var name="message" value="<p class="message success"><__trans phrase="Your comment has been received and held for approval by the blog owner."></p>"$>
+<mt:Else name="comment_error">
+    <$mt:Var name="page_title" value="<__trans phrase="Comment Submission Error">"$>
+    <mt:SetVarBlock name="message"><p class="message error"><__trans phrase="Your comment submission failed for the following reasons: [_1]" params="<$mt:ErrorMessage$>"></p></mt:SetVarBlock>
+</mt:If>
+<$mt:Include module="<__trans phrase="HTML Head">"$>
+        <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Previewing your Comment"></title>
+        <script type="text/javascript">
+            var user = <$mt:UserSessionState$>;
+            var is_preview = true;
+        </script>
+    </head>
+    <body>
+        <header>
+            <nav class="global">
+<$mt:Include module="<__trans phrase="Navigation">"$>
+            </nav>
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+        </header>
+
+        <div class="content">
+            <section>
+                <h1 class="title page"><$mt:Var name="page_title"$></h1>
+<$mt:Var name="message"$>
+                <p><__trans phrase="Return to the <a href="[_1]">original entry</a>." params="<mt:If name="comment_error">javascript:history.back()<mt:Else><$mt:EntryLink$></mt:If>"></p>
+            </section>
+        </div>
+
+        <footer>
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+        </footer>
+    </body>
+</html>

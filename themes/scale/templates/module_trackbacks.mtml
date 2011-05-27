@@ -1,0 +1,26 @@
+<mt:IfPingsActive>
+<aside id="trackbacks">
+    <header>
+        <h1><$mt:EntryTrackbackCount singular="<__trans phrase="1 TrackBack">" plural="<__trans phrase="# TrackBacks">" none="<__trans phrase="No TrackBacks">"$></h1>
+    </header>
+    <mt:IfPingsAccepted>
+    <p class="trackback-info"><__trans phrase="TrackBack URL: [_1]" params="<$mt:EntryTrackbackLink$>"></p>
+    </mt:IfPingsAccepted>
+    <mt:Pings>
+    <section id="ping-<$mt:PingID$>" class="feedback trackback">
+        <header>
+            <h2><__trans phrase="<a href="[_1]">[_2]</a> - [_3]</a>" params="<$mt:PingURL$>%%<$mt:PingTitle$>%%<$mt:PingBlogName$>"></h2>
+        </header>
+
+        <p><$mt:PingExcerpt$></p>
+
+        <footer>
+            <dl>
+                <dt><__trans phrase="Date"></dt>
+                <dd><time datetime="<$mt:PingDate format_name="iso8601"$>"><$mt:PingDate$></time></dd>
+            </dl>
+        </footer>
+    </section>
+    </mt:Pings>
+</aside>
+</mt:IfPingsActive>

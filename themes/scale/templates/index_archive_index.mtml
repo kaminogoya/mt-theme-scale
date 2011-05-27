@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<$mt:Include module="<__trans phrase="HTML Head">"$>
+        <title><$mt:BlogName encode_html="1"$>: <__trans phrase="Archives"></title>
+     </head>
+     <body class="archive-index">
+        <header>
+            <nav class="global">
+<$mt:Include module="<__trans phrase="Navigation">"$>
+            </nav>
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+        </header>
+
+        <div class="content">
+
+            <header>
+                <h1 class="title archive"><__trans phrase="Archives"></h1>
+            </header>
+
+<mt:IfArchiveTypeEnabled archive_type="Individual">
+    <mt:ArchiveList archive_type="Individual">
+        <mt:ArchiveListHeader>
+            <section class="archive-individual">
+                <header>
+                </header>
+                <table>
+                    <thead>
+                        <tr>
+                            <th><__trans phrase="Date"></th>
+                            <th><__trans phrase="Title"></th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th><__trans phrase="Date"></th>
+                            <th><__trans phrase="Title"></th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+        </mt:ArchiveListHeader>
+                        <tr>
+                            <td><$mt:ArchiveDate format="%Y.%m.%d"$></td>
+                            <td><a href="<$mt:ArchiveLink$>"><$mt:ArchiveTitle$></a></td>
+                        </tr>
+        <mt:ArchiveListFooter>
+                    </tbody>
+                </table>
+            </section>
+        </mt:ArchiveListFooter>
+    </mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+        </div>
+
+        <footer>
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+        </footer>
+    </body>
+</html>

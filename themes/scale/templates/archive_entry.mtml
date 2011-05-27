@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<$mt:Include module="<__trans phrase="HTML Head">"$>
+<$mt:SetVar name="comments_per_page" value="50"$>
+<mt:EntryPrevious><link rel="prev bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryPrevious>
+<mt:EntryNext><link rel="next bookmark" href="<$mt:EntryPermalink$>" title="<$mt:EntryTitle encode_html="1"$>" /></mt:EntryNext>
+<mt:If tag="EntryCommentCount" gt="$comments_per_page">
+        <script type="text/javascript">
+            MT.entryID = <$mt:EntryID$>;
+            MT.commentsPerPage = <$mt:Var name="comments_per_page"$>;
+            MT.entryCommentCount = <$mt:EntryCommentCount$>;
+            MT.commentIds = [<mt:Comments sort_order="ascend" glue=","><mt:CommentID></mt:Comments>];
+        </script>
+</mt:If>
+        <title><$mt:EntryTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
+    </head>
+    <body class="individual">
+        <header>
+            <nav class="global">
+<$mt:Include module="<__trans phrase="Navigation">"$>
+            </nav>
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+        </header>
+
+        <div class="content">
+
+            <div class="main-content">
+<$mt:Include module="<__trans phrase="Entry Summary">"$>
+
+<$mt:Include module="<__trans phrase="Comments">"$>
+
+<$mt:Include module="<__trans phrase="Trackbacks">"$>
+            </div>
+
+            <div class="related-content">
+<$mt:WidgetSet name="<__trans phrase="Related Contents (Individual)">"$>
+            </div>
+
+        </div>
+
+        <footer>
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+        </footer>
+    </body>
+</html>

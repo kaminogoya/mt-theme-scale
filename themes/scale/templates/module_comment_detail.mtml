@@ -1,0 +1,18 @@
+<article id="comment-<$mt:CommentID$>" class="feedback comment<mt:IfCommentParent> comment-reply</mt:IfCommentParent><mt:IfCommenterIsEntryAuthor> entry-author-comment</mt:IfCommenterIsEntryAuthor>">
+    <header>
+        <h2><mt:IfCommentParent><__trans phrase="[_1] replied to <a href="[_2]">comment from [_3]</a>" params="<$mt:CommentAuthorLink$>%%<mt:CommentParent><$mt:CommentLink$></mt:CommentParent>%%<mt:CommentParent><$mt:CommentAuthor$></mt:CommentParent>"><mt:Else><$mt:CommentAuthorLink$></mt:IfCommentParent></h2>
+    </header>
+
+    <$mt:CommentBody$>
+
+    <footer>
+        <dl>
+            <dt><__trans phrase="Date"></dt>
+            <dd><a href="<$mt:CommentLink$>"><time pubdate="pubdate" datetime="<$mt:CommentDate format_name="iso8601"$>"><$mt:CommentDate$></time></a></dd>
+    <mt:IfCommentsAccepted>
+            <dt><__trans phrase="Reply"></dt>
+            <dd><$mt:CommentReplyToLink$></dd>
+    </mt:IfCommentsAccepted>
+        </dl>
+    </footer>
+</article>

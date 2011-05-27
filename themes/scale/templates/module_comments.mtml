@@ -1,0 +1,61 @@
+<mt:IfCommentsActive>
+<section id="comments">
+    <header>
+        <h1><$mt:EntryCommentCount singular="<__trans phrase="1 Comment">" plural="<__trans phrase="# Comments">" none="<__trans phrase="No Comments">"$></h1>
+    </header>
+
+    <mt:Comments lastn="$comments_per_page">
+        <mt:CommentsHeader>
+            <mt:If name="entry_template">
+                <mt:If tag="EntryCommentCount" gt="$comments_per_page">
+    <nav>            
+        <ul id="top-comment-nav">
+            <li id="top-prev-comments">
+                <a href="javascript://" id="top-prev-comments-link" title="<__trans phrase="Older Comments">">&lt;&lt;&nbsp;<__trans phrase="Older Comments"></a>
+            </li>
+            <li id="top-num-comments">
+                <span id="top-current-comments"></span>
+            </li>
+            <li id="top-next-comments">
+                <a href="javascript://" id="top-next-comments-link" title="<__trans phrase="Newer Comments">"><__trans phrase="Newer Comments">&nbsp;&gt;&gt;</a>
+            </li>
+        </ul>
+    </nav>
+                </mt:If>
+            </mt:If>
+        </mt:CommentsHeader>
+
+        <$mt:Include module="<__trans phrase="Comment Detail">"$>
+
+        <mt:CommentsFooter>
+            <mtIf name="entry_template">
+                <mt:If tag="EntryCommentCount" gt="$comments_per_page">
+    <nav>
+        <ul id="comment-nav">
+            <li id="prev-comments">
+                <a href="javascript://" id="prev-comments-link" title="<__trans phrase="Older Comments">">&lt;&lt;&nbsp;<__trans phrase="Older Comments"></a>
+            </li>
+            <li id="num-comments">
+                <span id="current-comments"></span>
+            </li>
+            <li id="next-comments">
+                <a href="javascript://" id="next-comments-link" title="<__trans phrase="Newer Comments">"><__trans phrase="Newer Comments">&nbsp;&gt;&gt;</a>
+            </li>
+        </ul>
+    </nav>
+                </mt:If>
+            </mt:If>
+        </mt:CommentsFooter>
+    </mt:Comments>
+
+    <mt:IfCommentsAccepted>
+        <mt:IfRegistrationAllowed>
+    <p id="comment-greeting" class="message"><__trans phrase="Leave a comment"></p>
+        </mt:IfRegistrationAllowed>
+
+    <mt:Include module="<__trans phrase="Comment Form">">
+
+    </mt:IfCommentsAccepted>
+
+</section>
+</mt:IfCommentsActive>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<$mt:Include module="<__trans phrase="HTML Head">"$>
+<$mt:SetVar name="comments_per_page" value="50"$>
+<mt:If tag="EntryCommentCount" gt="$comments_per_page">
+        <script type="text/javascript">
+            MT.entryID = <$mt:PageID$>;
+            MT.commentsPerPage = <$mt:Var name="comments_per_page"$>;
+            MT.entryCommentCount = <$mt:EntryCommentCount$>;
+            MT.commentIds = [<mt:Comments sort_order="ascend" glue=","><mt:CommentID></mt:Comments>];
+        </script>
+</mt:If>
+        <title><$mt:PageTitle encode_html="1"$> - <$mt:BlogName encode_html="1"$></title>
+    </head>
+    <body class="individual">
+        <header>
+            <nav class="global">
+<$mt:Include module="<__trans phrase="Navigation">"$>
+            </nav>
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+        </header>
+
+        <div class="content">
+
+            <article id="page-<$mt:PageID$>">
+                <header>
+                    <h1 class="title page"><$mt:PageTitle$></h1>
+                </header>
+<$mt:PageBody$>
+<$mt:PageMore$>
+            </article>
+
+<$mt:Include module="<__trans phrase="Comments">"$>
+
+        </div>
+
+        <footer>
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+        </footer>
+    </body>
+</html>

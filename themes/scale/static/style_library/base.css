@@ -1,0 +1,406 @@
+/* Debug
+body {
+    outline: 1px solid #eee;    
+}
+body > * {
+    outline: 1px solid #ccc;
+    background-color: #eee;
+}
+body > * > * {
+    outline: 1px solid #85d9e9;
+    background-color: #e7f8fb;
+}
+body > * > * > * {
+    outline: 1px solid #8cea86;
+    background-color: #e8fbe7;
+}
+body > * > * > * > * {
+    outline: 1px solid #ffd292;
+    background-color: #fff7d8;
+}
+body > * > * > * > * > * {
+    outline: 1px solid #e656b1;
+    background-color: #f9d3eb;
+}
+body > * > * > * > * > * > * {
+    outline: 1px solid #c9171e;
+    background-color: #d3381c;
+}
+
+a, 
+input, 
+textarea, 
+select {
+    outline: 0;
+    background: none;
+} */
+
+header, 
+footer, 
+article, 
+section, 
+aside, 
+nav, 
+figure, 
+figcaption {
+    display: block;
+}
+
+body {
+    margin: 0;
+    line-height: 1.62;
+}
+
+/* Layout */
+.content, 
+body > header, 
+body > footer {
+    width: 68.6em;
+    margin: 0 auto;
+    padding: 1px 0;
+}
+.content {
+    position: relative;
+    margin: 1.62em auto 0;
+}
+.main-content {
+    float: left;
+    width: 45em;
+}
+.related-content {
+    float: right;
+    width: 21em;
+}
+footer {
+    clear: both;
+}
+
+
+/* - Elements */
+article, 
+section {
+    margin-bottom: 2.6em;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    margin: 0.62em 0;
+    font-size: 1.62em;
+    text-rendering: optimizeLegibility;
+}
+h2 {
+    font-size: 140%;
+}
+h3 {
+    font-size: 120%;
+}
+h4, 
+h5, 
+h6 {
+    font-size: 100%;
+}
+
+p {
+    margin: 1.62em 0;
+}
+
+ul, 
+ol {
+    margin: 1.62em 0 1.62em 1.62em;
+    padding: 0;
+}
+li ul, 
+li ol { 
+    margin: 0 1.62em;
+}
+
+dl {
+    margin: 1.62em 0;
+}
+dt {
+    margin: 0.62em 0;
+}
+
+pre { 
+    overflow: auto;
+    margin: 1.62em auto;
+    padding: 1.62em;
+    font-family: monospace;
+}
+
+blockquote { 
+    clear: both;
+    margin: 1.62em auto;
+    padding: 1px 1.62em;
+}
+
+table { 
+    width: 100%;
+    margin: 0 auto 1.62em;
+    border-spacing: 0;
+}
+th, 
+td { 
+    padding: 0.62em;
+    text-align: left;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+th { 
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+figure {
+    margin: 1.62em 0;
+}
+
+
+/* - Form */
+fieldset, 
+.actions-bar {
+    margin: 1.62em 0;
+}
+
+input[type=text], 
+input[type=password], 
+input.text,  
+textarea {
+    padding: 0.62em;
+    outline: 0;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+button, 
+.button, 
+input[type=submit], 
+input[type=button] { 
+    cursor: pointer;
+    overflow: visible;
+    display: inline-block;
+    outline: none;
+    margin-right: 0.62em;
+    padding: 0.62em 1.62em;
+    line-height: 1.2;
+    font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+/* - contents */
+body > header h2 {
+    font-size: 100%;
+    font-weight: normal;
+    margin: 0.62em 0 1.62em;
+}
+article footer {
+    margin-top: 2.62em;
+}
+footer dl {
+    margin: 0.62em 0;
+}
+footer dt {
+    display: none;
+}
+footer .tags dt {
+    display: inline;
+}
+footer dd {
+    display: inline;
+    margin: 0 0.62em 0 0;
+}
+.tags dd {
+    margin-left: 0.62em;
+}
+footer address {
+    display: inline;
+    font-style: normal;
+}
+
+.message {
+    padding: 0.62em;
+}
+
+/* - Comments */
+.comment header .userpic {
+    float: left;
+    position: relative;
+}
+.comment header .userpic img {
+    width: 2.62em;
+    height: 2.62em;
+}
+
+#comments-open-text {
+    margin: 0.62em 0;
+}
+#comment-text {
+    width: 100%;
+    max-width: 100%;
+    height: 15em;
+    margin-top: 0.62em;
+}
+
+#commenter-info ul {
+    margin: 1.62em 0;
+    padding: 0;
+}
+#commenter-info li {
+    position: relative;
+    list-style-type: none;
+    margin-bottom: 0.62em;
+}
+#commenter-info li label {
+    float: left;
+    width: 222px;
+    height: 27px;
+    line-height: 27px;
+}
+#commenter-info li input {
+    width: 358px;
+}
+#comment-form-reply {
+    margin: 0.62em 0;
+}
+
+/* - Trackbakcs */
+#trackbacks {
+    margin: 2.62em 0;
+}
+
+/* - Navigation */
+.content-nav {
+    margin: 1.62em 0 0;
+}
+.nav-list {
+    margin: 0;
+    padding: 0;
+    
+}
+.nav-item {
+    float: left;
+    list-style-type: none;
+    line-height: 1;
+}
+.nav-link {
+    display: block;
+    padding: 0.62em 1.62em;
+}
+.nav-item.next {
+    float: right;
+}
+
+/* - Widgets */
+.widget {
+    margin-bottom: 1.62em;
+}
+
+.widget ul, 
+.widget ol {
+    margin: 0.62em 0 0.62em 1.62em;
+    padding: 0;
+}
+.widget li ul, 
+.widget li ol { 
+    margin: 0 0 0 1.62em;
+}
+
+/* -- Search */
+.widget-search {
+    text-align: right;
+}
+.widget-search .text {
+    width: 70%;
+}
+/* -- Recent Assets */
+.widget-recent-assets ul {
+    padding: 0;
+    margin-left: 0;
+}
+.widget-recent-assets .item {
+    float: left;
+    display: block;
+    width: 4em;
+    height: 4em;
+    margin: 0;
+    padding: 0;
+    border: 1px solid;
+}
+.widget-recent-assets .item a {
+    display: block;
+    text-align: center;
+}
+.widget-recent-assets .item img {
+    width: 100%;
+}
+
+/* -- Calendar */
+.widget-calendar table {
+    table-layout: fixed;
+}
+.widget-calendar th, 
+.widget-calendar td {
+    padding: 0.26em 0;
+    text-align: center;
+}
+
+/* -- Tag Cloud */
+.widget-tag-cloud ul {
+    margin-left: 0;
+}
+.widget-tag-cloud li {
+    display: inline;
+    margin: 0 5px 0 0;
+    padding: 0;
+    background: none;
+}
+.tag-rank-1 {
+    font-size: 162%;
+}
+.tag-rank-2 { 
+    font-size: 152%;
+}
+.tag-rank-3 { 
+    font-size: 142%;
+}
+.tag-rank-4 { 
+    font-size: 132%;
+}
+.tag-rank-5 { 
+    font-size: 122%;
+}
+.tag-rank-6 { 
+    font-size: 112%;
+}
+.tag-rank-7 { 
+    font-size: 100%;
+}
+.tag-rank-8 {
+    font-size: 90%;
+}
+.tag-rank-9 {
+    font-size: 80%;
+}
+.tag-rank-10 { 
+    font-size: 70%;
+}
+
+/* - Clearfix */
+.nav-list:after, 
+.content:after, 
+.widget-recent-assets ul:after {
+    content:'';
+    display:block;
+    clear:both;
+}

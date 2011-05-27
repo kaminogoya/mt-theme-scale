@@ -1,0 +1,12 @@
+<div class="widget-search widget section">
+    <form method="get" action="<$mt:CGIPath$><$mt:SearchScript$>">
+        <input type="text" name="search" id="search" class="text search" value="<$mt:SearchString$>" />
+<mt:If name="search_results">
+        <input type="hidden" name="IncludeBlogs" value="<$mt:SearchIncludeBlogs$>" />
+<mt:Else>
+        <input type="hidden" name="IncludeBlogs" value="<$mt:BlogID$>" />
+</mt:If>
+        <input type="hidden" name="limit" value="<$mt:SearchMaxResults$>" />
+        <input type="submit" accesskey="4" value="<__trans phrase="Search">" />
+    </form>
+</div>

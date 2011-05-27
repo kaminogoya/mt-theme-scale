@@ -1,0 +1,14 @@
+<mt:IfArchiveTypeEnabled archive_type="Author-Monthly">
+    <mt:ArchiveList archive_type="Author-Monthly">
+        <mt:ArchiveListHeader>
+<div class="widget-archive-current-author-monthly widget section">
+    <h2><__trans phrase="[_1]: Monthly Archives" params="<$mt:AuthorDisplayName encode_html="1"$>"></h2>
+    <ul>
+        </mt:ArchiveListHeader>
+        <li><a href="<$mt:ArchiveLink$>"><__trans phrase="[_1] ([_2])" params="<$mt:ArchiveTitle$>%%<$mt:ArchiveCount$>"></a></li>
+        <mt:ArchiveListFooter>
+    </ul>
+        </mt:ArchiveListFooter>
+    </mt:ArchiveList>
+</div>
+</mt:IfArchiveTypeEnabled>

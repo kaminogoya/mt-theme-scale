@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<$mt:Include module="<__trans phrase="HTML Head">"$>
+        <title><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"> - <$mt:BlogName encode_html="1"$></title>
+<mt:If name="datebased_archive">
+    <mt:ArchivePrevious>
+        <link rel="prev" href="<$mt:ArchiveLink$>" title="<$mt:ArchiveTitle encode_html="1"$>">
+    </mt:ArchivePrevious>
+    <mt:ArchiveNext>
+        <link rel="next" href="<$mt:ArchiveLink$>" title="<$mt:ArchiveTitle encode_html="1"$>">
+    </mt:ArchiveNext>
+</mt:If>
+    </head>
+    <body class="archive-list category">
+
+        <header>
+            <nav class="global">
+<$mt:Include module="<__trans phrase="Navigation">"$>
+            </nav>
+<$mt:Include module="<__trans phrase="Banner Header">"$>
+        </header>
+
+        <div class="content">
+
+            <div class="main-content">
+                <section>
+                    <header>
+                        <h1 class="title archive"><__trans phrase="[_1] Archives" params="<$mt:ArchiveTitle$>"></h1>
+                    </header>
+<mt:Unless name="datebased_archive"><$mt:Var name="limit" value="auto"$></mt:Unless>
+    <mt:Entries limit="$limit">
+        <$mt:Include module="<__trans phrase="Entry Summary">"$>
+    </mt:Entries>
+                </section>
+            </div>
+
+            <div class="related-content">
+<$mt:WidgetSet name="<__trans phrase="Related Contents (Archive)">"$>
+            </div>
+
+        </div>
+
+        <footer>
+<$mt:Include module="<__trans phrase="Banner Footer">"$>
+        </footer>
+    </body>
+</html>
