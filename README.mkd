@@ -6,7 +6,7 @@ Taichi Kaminogoya
 
 ## License
 
-This library is free software released under the GPL.
+This theme released under the GPL.
 
 ## Installation
 
