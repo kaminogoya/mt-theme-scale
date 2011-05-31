@@ -38,7 +38,7 @@
                 content += '<a href="' + url + '">' + u.name + '</a>';
             else
                 content += u.name;
-            content += '.  (<a href="javascript:void(0)" onclick="return mtSignOutOnClick()"><__trans phrase="sign out" escape="js"></a>)';
+            content += ' (<a href="javascript:void(0)" onclick="return mtSignOutOnClick()"><__trans phrase="Sign Out" escape="js"></a>)';
         } else if (u && u.is_banned) {
             content = '<__trans phrase="You do not have permission to sign in to this blog." escape="js">';
         } else {

@@ -232,6 +232,11 @@ footer address {
     padding: 0.62em;
 }
 
+img.indicator {
+    vertical-align: middle;
+}
+
+
 /* - Comments */
 .comment header .userpic {
     float: left;
