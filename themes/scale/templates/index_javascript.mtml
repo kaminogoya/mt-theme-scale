@@ -1179,7 +1179,7 @@ function mtShowGreeting() {
 
     if ( u && u.is_authenticated ) {
         if ( u.is_banned ) {
-            phrase = '<__trans phrase="You do not have permission to comment on this blog. ([_1]sign out[_2])" params="<a href="javascript:void(0);" onclick="return mtSignOutOnClick();">%%</a>" escape="js">';
+            phrase = '<__trans phrase="You do not have permission to comment on this blog. ([_1]Sign Out[_2])" params="<a href="javascript:void(0);" onclick="return mtSignOutOnClick();">%%</a>" escape="js">';
         } else {
             var user_link;
             if ( u.is_author ) {
@@ -1193,7 +1193,7 @@ function mtShowGreeting() {
                     user_link = u.name;
             }
             // TBD: supplement phrase with userpic if one is available.
-            phrase = '<__trans phrase="Thanks for signing in, __NAME__. ([_1]sign out[_2])" params="<a href="javascript:void(0)" onclick="return mtSignOutOnClick();">%%</a>" escape="js">';
+            phrase = '<__trans phrase="Thanks for signing in, __NAME__. ([_1]Sign Out[_2])" params="<a href="javascript:void(0)" onclick="return mtSignOutOnClick();">%%</a>" escape="js">';
             phrase = phrase.replace(/__NAME__/, user_link);
         }
     } else {
