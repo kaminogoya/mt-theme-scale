@@ -6,19 +6,14 @@
 
 <$mt:EntryBody$>
 
-<mt:Unless name="entry_archive">
-    <mt:If tag="EntryMore">
-    <p class="more-link"><__trans phrase="Continue reading <a href="[_1]" rel="bookmark">[_2]</a>." params="<$mt:EntryPermalink$>#more%%<$mt:EntryTitle$>"></p>
-    </mt:If>
-<mt:Else>
-    <$mt:EntryMore$>
-</mt:Unless>
+<mt:If tag="EntryMore">
+    <p class="more-link"><__trans phrase="Continue reading <a href="[_1]" rel="bookmark">[_2]</a>." params="<$mt:EntryPermalink$>%%<$mt:EntryTitle$>"></p>
+</mt:If>
 
     <footer>
         <dl class="feedback">
             <dt><__trans phrase="Author"></dt>
             <dd><__trans phrase="Posted By"> <mt:If tag="EntryAuthorDisplayName"><address class="entry-author vcard author"><$mt:EntryAuthorLink show_hcard="1"$></address></mt:If></dd>
-<mt:Unless name="entry_archive">
     <mt:Unless name="hide_counts" eq="1">
         <mt:IfCommentsActive>
             <dt><__trans phrase="Comment"></dt>
@@ -29,16 +24,6 @@
             <dd><a href="<$mt:EntryPermalink$>#trackbacks"><$mt:EntryTrackbackCount singular="<__trans phrase="1 TrackBack">" plural="<__trans phrase="# TrackBacks">" none="<__trans phrase="No TrackBacks">"$></a></dd>
         </mt:IfPingsActive>
     </mt:Unless>
-<mt:Else>
-        </dl>
-        <dl class="tags">
-    <mt:EntryIfTagged>
-            <dt><__trans phrase="Tags">:</dt>
-            <dd>
-        <mt:EntryTags glue=", "><a rel="tag" href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" class="tag"><$mt:TagName$></a></li></mt:EntryTags>
-            </dd>
-    </mt:EntryIfTagged>
-</mt:Unless>
         </dl>
     </footer>
 

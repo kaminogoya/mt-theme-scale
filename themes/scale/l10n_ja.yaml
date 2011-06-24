@@ -4,6 +4,7 @@ Related Contents (Individual): サイトバー (個別アーカイブページ)
 AD: 広告
 Entry Date: 記事投稿日
 About: アバウト
+'Continue reading <a href="[_1]" rel="bookmark">[_2]</a>.': '<a href="[_1]" rel="bookmark">[_2]</a> の続きを読む'
 'You are signed in as ': 'ユーザー名: '
 '[_1] replied to <a href="[_2]">comment from [_3]</a>': '[_1] から <a href="[_2]">[_3]</a> への返信'
 Post a Comment: コメントを投稿する

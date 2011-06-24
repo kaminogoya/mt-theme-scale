@@ -26,7 +26,35 @@
         <div class="content">
 
             <div class="main-content">
-<$mt:Include module="<__trans phrase="Entry Summary">"$>
+
+                <article id="entry-<$mt:EntryID$>">
+                    <header>
+                        <time pubdate="pubdate" datetime="<$mt:EntryDate format_name="iso8601"$>"><$mt:EntryDate format="%x %X"$></time>
+                        <h1 class="title entry"><a href="<$mt:EntryPermalink$>"><$mt:EntryTitle$></a></h1>
+                    </header>    
+
+<$mt:EntryBody$>
+
+<$mt:EntryMore$>
+
+                    <footer>
+                        <dl class="feedback">
+                            <dt><__trans phrase="Author"></dt>
+                            <dd><__trans phrase="Posted By"> <mt:If tag="EntryAuthorDisplayName"><address class="entry-author vcard author"><$mt:EntryAuthorLink show_hcard="1"$></address></mt:If></dd>
+                        </dl>
+<mt:EntryIfTagged>
+                        <dl class="tags">
+                            <dt><__trans phrase="Tags">:</dt>
+                            <dd>
+                                <mt:EntryTags glue=", "><a rel="tag" href="javascript:void(0)" onclick="location.href='<$mt:TagSearchLink encode_js="1"$>';return false;" class="tag"><$mt:TagName$></a></li></mt:EntryTags>
+                            </dd>
+                        </dl>
+</mt:EntryIfTagged>
+                    </footer>
+
+<mt:include module="<__trans phrase="Social Buttons">">
+
+                </article>
 
 <$mt:Include module="<__trans phrase="Comments">"$>
 
