@@ -23,3 +23,7 @@ This theme released under the GPL.
 ### 0.1 (May 27, 2011)
 
 * Initial release
+
+### 0.2 (Jun 24, 2011)
+
+* Fixed bugs
