@@ -34,27 +34,27 @@ elements:
           order: 1
       templates:
         index:
-          index_archive_index:
+          archive_index:
             label: Archive Index
             outfile: archives.html
             rebuild_me: 1
-          index_feed_recent:
+          feed_recent:
             label: 'Feed - Recent Entries'
             outfile: atom.xml
             rebuild_me: 1
-          index_javascript:
+          javascript:
             label: JavaScript
             outfile: mt.js
             rebuild_me: 1
-          index_main_index:
+          main_index:
             label: Main Index
             outfile: index.html
             rebuild_me: 1
-          index_rsd:
+          rsd:
             label: RSD
             outfile: rsd.xml
             rebuild_me: 1
-          index_styles:
+          styles:
             label: Stylesheet
             outfile: styles.css
             rebuild_me: 1
