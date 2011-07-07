@@ -170,13 +170,21 @@ input[type=text],
 input[type=password], 
 input.text,  
 textarea {
+    margin: 0;
     padding: 0.62em;
     outline: 0;
     vertical-align: middle;
+    font-size: 11px;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
+input[type=text], 
+input[type=password], 
+input.text {
+    height: 29px;
+}
+
 
 button, 
 .button, 
@@ -186,10 +194,12 @@ input[type=button] {
     overflow: visible;
     display: inline-block;
     outline: none;
-    margin-right: 0.62em;
+    height: 29px;
+    margin:0 0 0 0.62em;
     padding: 0.62em 1.62em;
     line-height: 1.2;
     font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    font-size: 11px;
     text-align: center;
     text-decoration: none;
     vertical-align: middle;
