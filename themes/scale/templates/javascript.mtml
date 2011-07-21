@@ -1476,3 +1476,15 @@ if (clearCookie) {
 }
 </mt:IfRegistrationAllowed>
 </mt:IfBlog>
+
+<mt:Ignore>
+/***
+ * for Smartphone
+ */
+</mt:Ignore>
+if (navigator.userAgent.indexOf('iPhone') > 0 || 
+    navigator.userAgent.indexOf('iPad') > 0 || 
+    navigator.userAgent.indexOf('iPod') > 0 || 
+    navigator.userAgent.indexOf('Android') > 0) {
+    document.write('<link type="text/css" rel="stylesheet" href="<$MTStaticWebPath$>support/theme_static/scale/style_library/smartphone.css">');
+}

@@ -27,3 +27,8 @@ This theme released under the GPL.
 ### 0.2 (Jun 24, 2011)
 
 * Fixed bugs
+
+### 0.3 (Jul 21, 2011)
+
+* Fixed bugs
+* Added Smartphone view.

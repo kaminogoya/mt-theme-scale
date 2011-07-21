@@ -195,7 +195,7 @@ input[type=button] {
     display: inline-block;
     outline: none;
     height: 29px;
-    margin:0 0 0 0.62em;
+    margin:0 0.62em 0 0;
     padding: 0.62em 1.62em;
     line-height: 1.2;
     font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;

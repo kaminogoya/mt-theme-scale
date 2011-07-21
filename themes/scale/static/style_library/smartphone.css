@@ -1,0 +1,99 @@
+body {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 16px;
+    -webkit-text-size-adjust: none;
+}
+
+/* Layout */
+body > * {
+    width: auto;
+}
+
+.content, 
+body > header, 
+body > footer {
+    margin: 0 16px;
+    width: auto;
+}
+.content {
+    margin-top: 1.62em;
+}
+.main-content {
+    float: none;
+    width: 100%;
+}
+.related-content {
+    display: none;
+}
+article, 
+section {
+    margin-bottom: 30px;
+    text-align: justify;
+}
+
+nav.global {
+    font-size: 80%;
+}
+
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+    font-size: 110%;
+    text-align: left;
+}
+
+body > header {
+    background: transparent;
+}
+.title.blog {
+    font-size: 130%;
+    margin-bottom: 0.62em;
+}
+.title.entry {
+    font-weight: bold;
+}
+figure img, 
+.picture img, 
+.asset img {
+    max-width: 100%;
+    margin: 0;
+}
+
+/* Feedbacks */
+#comments {
+    margin-top: 0.62em;
+}
+
+Fieldset {
+    border: 0;
+    padding: 0;
+}
+legend {
+    display: none;
+}
+
+#comments-open-text label, 
+#commenter-info li label {
+    display: none;
+}
+#commenter-info input[type=text] {
+    width: 100%;
+}
+#comment-cancel, 
+#comment-submit, 
+#comment-preview {
+    width: 100%;
+    margin: 0 0 1.62em;
+    font-weight: bold;
+}
+
+#trackbacks {
+    display: none;
+}

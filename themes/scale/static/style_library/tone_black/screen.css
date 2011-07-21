@@ -43,8 +43,9 @@ h6 {
 article {
     border-bottom: 1px solid #dcdddd;
 }
-.entry article {
+.individual article {
     border: 0;
+    margin-bottom: 0.62em;
 }
 
 header time {
