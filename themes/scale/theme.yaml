@@ -59,52 +59,52 @@ elements:
             outfile: styles.css
             rebuild_me: 1
         individual:
-          archive_entry:
+          entry:
             label: Entry
             mappings:
               individual:
                 archive_type: Individual
                 preferred: 1
         page:
-          archive_page:
+          page:
             label: Page
             mappings:
               page:
                 archive_type: Page
                 preferred: 1
         archive:
-          archive_category_entry_listing:
+          category_entry_listing:
             label: Category Entry Listing
             mappings:
               category:
                 archive_type: Category
                 preferred: 1
-          archive_monthly_entry_listing:
+          monthly_entry_listing:
             label: Monthly Entry Listing
             mappings:
               monthly:
                 archive_type: Monthly
                 preferred: 1
         module:
-          module_banner_footer:
+          banner_footer:
             label: Banner Footer
-          module_banner_header:
+          banner_header:
             label: Banner Header
-          module_navigation:
+          navigation:
             label: Navigation
-          module_comment_form:
+          comment_form:
             label: Comment Form
-          module_comment_detail:
+          comment_detail:
             label: Comment Detail
-          module_comments:
+          comments:
             label: Comments
-          module_entry_summary:
+          entry_summary:
             label: Entry Summary
-          module_html_head:
+          html_head:
             label: HTML Head
-          module_social_buttons:
+          social_buttons:
             label: Social Buttons
-          module_trackbacks:
+          trackbacks:
             label: Trackbacks
         system:
           comment_listing:
@@ -126,45 +126,43 @@ elements:
             description_label: Displays results of a search.
             label: Search Results
         widget:
-          widget_ad:
+          ad:
             label: AD
-          about_this_page:
-            label: About This Page
-          widget_author_archive_list:
+          author_archive_list:
             label: Author Archives
-          widget_calendar:
+          calendar:
             label: Calendar
-          widget_category_archive_list:
+          category_archive_list:
             label: Category Archives
-          widget_current_author_monthly_archive_list:
+          current_author_monthly_archive_list:
             label: Current Author Monthly Archives
-          widget_current_category_monthly_archive_list:
+          current_category_monthly_archive_list:
             label: Current Category Monthly Archives
-          widget_date_based_author_archives:
+          date_based_author_archives:
             label: Date-Based Author Archives
-          widget_date_based_category_archives:
+          date_based_category_archives:
             label: Date-Based Category Archives
-          widget_monthly_archive_dropdown:
+          monthly_archive_dropdown:
             label: Monthly Archives Dropdown
-          widget_monthly_archive_list:
+          monthly_archive_list:
             label: Monthly Archives
-          widget_openid:
+          openid:
             label: OpenID Accepted
-          widget_pages_list:
+          pages_list:
             label: Page Listing
-          widget_recent_assets:
+          recent_assets:
             label: Recent Assets
-          widget_recent_comments:
+          recent_comments:
             label: Recent Comments
-          widget_recent_entries:
+          recent_entries:
             label: Recent Entries
-          widget_search:
+          search:
             label: Search
-          widget_signin:
+          signin:
             label: Sign In
-          widget_syndication:
+          syndication:
             label: Syndication
-          widget_tag_cloud:
+          tag_cloud:
             label: Tag Cloud
         widgetset:
           widgetset_related_contents_index:
@@ -172,32 +170,29 @@ elements:
             order: 1000
             widgets:
               - Search
-              - Sign In
               - Calendar
               - Category Archives
               - Monthly Archives Dropdown
-              - Recent Assets
               - Recent Comments
-              - Recent Entries
-              - OpenID Accepted
+              - Tag Cloud
               - Syndication
           widgetset_related_contents_individual:
             label: 'Related Contents (Individual)'
             order: 1001
             widgets:
-              - AD
               - Search
-              - About This Page
-              - OpenID Accepted
+              - AD
+              - Category Archives
+              - Monthly Archives Dropdown
               - Syndication
           widgetset_related_contents_archive:
             label: 'Related Contents (Archive)'
             order: 1002
             widgets:
-              - AD
               - Search
-              - About This Page
-              - OpenID Accepted
+              - AD
+              - Category Archives
+              - Monthly Archives Dropdown
               - Syndication
 
 
