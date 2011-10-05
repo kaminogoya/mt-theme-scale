@@ -4,15 +4,10 @@ Related Contents (Individual): サイトバー (個別アーカイブページ)
 AD: 広告
 Entry Date: 記事投稿日
 About: アバウト
-'Continue reading <a href="[_1]" rel="bookmark">[_2]</a>.': '<a href="[_1]" rel="bookmark">[_2]</a> の続きを読む'
-'You are signed in as ': 'ユーザー名: '
-'[_1] replied to <a href="[_2]">comment from [_3]</a>': '[_1] から <a href="[_2]">[_3]</a> への返信'
+Continue reading <a href="[_1]" rel="bookmark">[_2]</a>.: <a href="[_1]" rel="bookmark">[_2]</a> の続きを読む
+You are signed in as: ユーザー名
 Post a Comment: コメントを投稿する
 Reply: 返信
 Sign Out: サインアウト
-'Signing in...': '...' 
-'You do not have permission to comment on this blog. ([_1]Sign Out[_2])': 'このブログにコメントする権限を持っていません。([_1]サインアウト[_2])'
-'Thanks for signing in, __NAME__. ([_1]Sign Out[_2])': '__NAME__ ([_1]サインアウト[_2])'
-'[_1]Sign in[_2] to comment.': '[_1]サインイン[_2]'
-'[_1]Sign in[_2] to comment, or comment anonymously.': '[_1]サインイン[_2]'
-'Replying to <a href="[_1]" onclick="[_2]">comment from [_3]</a>': '<a href="[_1]" onclick="[_2]">[_3]からのコメント</a>に返信'
+You do not have permission to comment on this blog. ([_1]Sign Out[_2]): このブログにコメントする権限を持っていません。([_1]サインアウト[_2])
+Thanks for signing in, __NAME__. ([_1]Sign Out[_2]): __NAME__ ([_1]サインアウト[_2])
