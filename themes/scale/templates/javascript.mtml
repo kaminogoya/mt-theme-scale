@@ -748,7 +748,7 @@ function mtShowCaptcha() {
     var u = mtGetUser();
     if ( u && u.is_authenticated ) return;
     if (mtCaptchaVisible) return;
-    var div = document.getElementById('comments-openo-captcha');
+    var div = document.getElementById('comments-open-captcha');
     if (div) {
         div.innerHTML = '<$mt:CaptchaFields$>';
         mtCaptchaVisible = true;
@@ -970,7 +970,7 @@ function mtCommentOnSubmit(f) {
 
 function mtCommentSessionVerify(app_user) {
     var u = mtGetUser();
-    var f = document['comments-form'];
+    var f = document['comments_form'];
     if ( u && app_user && app_user.sid && ( u.sid == app_user.sid ) ) {
         f.submit();
     } else {
@@ -992,7 +992,7 @@ function mtUserOnLoad() {
     if ( document.getElementById('comments-form')) {
         if ( u && u.is_authenticated ) {
             mtShow('comments-form');
-            mtHide('commenter-info');
+            mtHide('comments-open-data');
             if (mtCaptchaVisible)
                 mtHide('comments-open-captcha');
         } else {
@@ -1011,7 +1011,7 @@ function mtUserOnLoad() {
             mtShowGreeting();
 
         // populate anonymous comment fields if user is cookied as anonymous
-        var cf = document['comments-form'];
+        var cf = document['comments_form'];
         if (cf) {
             if (u && u.is_anonymous) {
                 if (u.email) cf.email.value = u.email;
@@ -1042,17 +1042,17 @@ function mtUserOnLoad() {
 </mt:Ignore>
 <mt:IfBlog>
 function mtEntryOnLoad() {
-    var cf = document['comments-form'];
+    var cf = document['comments_form'];
     if (cf && cf.preview) cf.preview.value = '';
     <mt:Unless tag="IfPingsAccepted">mtHide('trackbacks-info');</mt:Unless>
-    <mt:Unless tag="IfCommentsAccepted">mtHide('comment-greeting');
-    mtHide('comments-form');</mt:Unless>
+    <mt:Unless tag="IfCommentsAccepted">mtHide('comments-form');
+    mtHide('comment-greeting');</mt:Unless>
     mtFireEvent('usersignin');
 }
 
 function mtEntryOnUnload() {
     if (mtRequestSubmitted) {
-        var cf = document['comments-form'];
+        var cf = document['comments_form'];
         if (cf) {
             if (cf.post && cf.post.disabled)
                 cf.post.disabled = false;
@@ -1078,8 +1078,8 @@ function mtSignIn() {
     doc_url = doc_url.replace(/#.+/, '');
     var url = '<$mt:SignInLink$>';
     if (is_preview) {
-        if ( document['comments-form'] ) {
-            var entry_id = document['comments-form'].entry_id.value;
+        if ( document['comments_form'] ) {
+            var entry_id = document['comments_form'].entry_id.value;
             url += '&entry_id=' + entry_id;
         } else {
             url += '&return_url=<$mt:BlogURL encode_url="1"$>';
@@ -1100,7 +1100,7 @@ function mtSignInOnClick(sign_in_element) {
             el = document.getElementById('comment-form-external-auth');
     }
     if (el)
-        el.innerHTML = '<__trans phrase="Signing in..." escape="js"> <img alt="<__trans phrase="Signing in...">" src="<$MTStaticWebPath$>images/indicator.white.gif" class="indicator">';
+        el.innerHTML = '<__trans phrase="Signing in..." escape="js"> <span class="status-indicator">&nbsp;</span>';
 
     mtClearUser(); // clear any 'anonymous' user cookie to allow sign in
     mtFetchUser('mtSetUserOrLogin');
@@ -1129,8 +1129,8 @@ function mtSignOut(entry_id) {
     doc_url = doc_url.replace(/#.+/, '');
     var url = '<$mt:SignOutLink$>';
     if (is_preview) {
-        if ( document['comments-form'] ) {
-            var entry_id = document['comments-form'].entry_id.value;
+        if ( document['comments_form'] ) {
+            var entry_id = document['comments_form'].entry_id.value;
             url += '&entry_id=' + entry_id;
         } else {
             url += '&return_url=<$mt:BlogURL encode_url="1"$>';
@@ -1162,7 +1162,7 @@ function mtShowGreeting() {
 <mt:IfRegistrationAllowed>
     var reg_reqd = <mt:IfRegistrationRequired>true<mt:Else>false</mt:IfRegistrationRequired>;
 
-    var cf = document['comments-form'];
+    var cf = document['comments_form'];
     if (!cf) return;
 
     var el = document.getElementById('comment-greeting');
@@ -1179,7 +1179,7 @@ function mtShowGreeting() {
 
     if ( u && u.is_authenticated ) {
         if ( u.is_banned ) {
-            phrase = '<__trans phrase="You do not have permission to comment on this blog. ([_1]Sign Out[_2])" params="<a href="javascript:void(0);" onclick="return mtSignOutOnClick();">%%</a>" escape="js">';
+            phrase = '<__trans phrase="You do not have permission to comment on this blog. ([_1]sign out[_2])" params="<a href="javascript:void(0);" onclick="return mtSignOutOnClick();">%%</a>" escape="js">';
         } else {
             var user_link;
             if ( u.is_author ) {
@@ -1193,7 +1193,7 @@ function mtShowGreeting() {
                     user_link = u.name;
             }
             // TBD: supplement phrase with userpic if one is available.
-            phrase = '<__trans phrase="Thanks for signing in, __NAME__. ([_1]Sign Out[_2])" params="<a href="javascript:void(0)" onclick="return mtSignOutOnClick();">%%</a>" escape="js">';
+            phrase = '<__trans phrase="Thanks for signing in, __NAME__. ([_1]sign out[_2])" params="<a href="javascript:void(0)" onclick="return mtSignOutOnClick();">%%</a>" escape="js">';
             phrase = phrase.replace(/__NAME__/, user_link);
         }
     } else {
@@ -1476,15 +1476,3 @@ if (clearCookie) {
 }
 </mt:IfRegistrationAllowed>
 </mt:IfBlog>
-
-<mt:Ignore>
-/***
- * for Smartphone
- */
-</mt:Ignore>
-if (navigator.userAgent.indexOf('iPhone') > 0 || 
-    navigator.userAgent.indexOf('iPad') > 0 || 
-    navigator.userAgent.indexOf('iPod') > 0 || 
-    navigator.userAgent.indexOf('Android') > 0) {
-    document.write('<link type="text/css" rel="stylesheet" href="<$MTStaticWebPath$>support/theme_static/scale/style_library/smartphone.css">');
-}

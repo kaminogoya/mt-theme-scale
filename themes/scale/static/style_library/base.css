@@ -267,22 +267,22 @@ img.indicator {
     margin-top: 0.62em;
 }
 
-#commenter-info ul {
+#comments-open-data ul {
     margin: 1.62em 0;
     padding: 0;
 }
-#commenter-info li {
+#comments-open-data li {
     position: relative;
     list-style-type: none;
     margin-bottom: 0.62em;
 }
-#commenter-info li label {
+#comments-open-data li label {
     float: left;
     width: 222px;
     height: 27px;
     line-height: 27px;
 }
-#commenter-info li input {
+#comments-open-data li input {
     width: 358px;
 }
 #comment-form-reply {

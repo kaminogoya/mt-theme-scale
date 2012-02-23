@@ -1,4 +1,4 @@
-<form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments-form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
+<form method="post" action="<$mt:CGIPath$><$mt:CommentScript$>" name="comments_form" id="comments-form" onsubmit="return mtCommentOnSubmit(this)">
     <fieldset>
         <legend><__trans phrase="Post a Comment"></legend>
         <input type="hidden" name="static" value="1" />
@@ -18,7 +18,7 @@
             <textarea id="comment-text" name="text" onfocus="mtCommentFormOnFocus()"><mt:If name="comment_preview"><mt:CommentBody autolink="0" sanitize="0" convert_breaks="0" encode_html="1"></mt:If></textarea>
         </div>
 
-        <div id="commenter-info">
+        <div id="comments-open-data">
             <ul>
                 <li>
                     <label for="comment-author"><__trans phrase="Name"></label> <input type="text" id="comment-author" class="text" name="author" value="<mt:If name="comment_preview"><mt:CommentAuthor encode_html="1"></mt:If>" placeholder="<__trans phrase="Name">" onfocus="mtCommentFormOnFocus()" />
