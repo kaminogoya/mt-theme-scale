@@ -32,3 +32,7 @@ This theme released under the GPL.
 
 * Fixed bugs
 * Added Smartphone view.
+
+### 0.31 (Jul 21, 2011)
+
+* Updated JavaScript template for MT5.07 and 5.13 release.
